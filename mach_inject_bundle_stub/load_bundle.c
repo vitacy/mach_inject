@@ -112,6 +112,7 @@ load_bundle_executable(
 		dlerror();
 		return err_load_bundle_NSObjectFileImageFailure;
 	}
+	dlclose(image);
 
 	return 0;
 }
