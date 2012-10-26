@@ -272,67 +272,19 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		33B2AC7809285567004B1632 /* Development */ = {
+		EAC693AB16379C6E00835782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = (
-					ppc,
-					i386,
-					x86_64,
-				);
-				COPY_PHASE_STRIP = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = mach_inject_bundle_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "@executable_path/../Frameworks";
-				LD_DYLIB_INSTALL_NAME = "@rpath/Frameworks/$(EXECUTABLE_PATH)";
-				LIBRARY_STYLE = DYNAMIC;
-				MACH_O_TYPE = mh_dylib;
-				OTHER_LDFLAGS = (
-					"-seg1addr",
-					0xc0000000,
-				);
-				PRODUCT_NAME = mach_inject_bundle;
-				WRAPPER_EXTENSION = framework;
-				ZERO_LINK = YES;
+				CODE_SIGN_IDENTITY = lldb_codesign;
+				PROVISIONING_PROFILE = "";
 			};
-			name = Development;
+			name = Debug;
 		};
-		33B2AC7909285567004B1632 /* Deployment */ = {
+		EAC693AC16379C6E00835782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				COPY_PHASE_STRIP = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = mach_inject_bundle_Prefix.pch;
-				INFOPLIST_FILE = Info.plist;
-				INSTALL_PATH = "@executable_path/../Frameworks";
-				LD_DYLIB_INSTALL_NAME = "@rpath/Frameworks/$(EXECUTABLE_PATH)";
-				LIBRARY_STYLE = DYNAMIC;
-				MACH_O_TYPE = mh_dylib;
-				OTHER_LDFLAGS = (
-					"-seg1addr",
-					0xc0000000,
-				);
-				PRODUCT_NAME = mach_inject_bundle;
-				WRAPPER_EXTENSION = framework;
-				ZERO_LINK = NO;
-			};
-			name = Deployment;
-		};
-		33B2AC7A09285567004B1632 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -351,25 +303,40 @@
 				PRODUCT_NAME = mach_inject_bundle;
 				WRAPPER_EXTENSION = framework;
 			};
-			name = Default;
+			name = Debug;
 		};
-		33B2AC7C09285567004B1632 /* Development */ = {
+		EAC693AD16379C7400835782 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = lldb_codesign;
+				PROVISIONING_PROFILE = "";
 			};
-			name = Development;
+			name = Release;
 		};
-		33B2AC7D09285567004B1632 /* Deployment */ = {
+		EAC693AE16379C7400835782 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = mach_inject_bundle_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				LD_DYLIB_INSTALL_NAME = "@rpath/Frameworks/$(EXECUTABLE_PATH)";
+				LIBRARY_STYLE = DYNAMIC;
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = (
+					"-seg1addr",
+					0xc0000000,
+				);
+				PRODUCT_NAME = mach_inject_bundle;
+				WRAPPER_EXTENSION = framework;
 			};
-			name = Deployment;
-		};
-		33B2AC7E09285567004B1632 /* Default */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Default;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -377,22 +344,20 @@
 		33B2AC7709285567004B1632 /* Build configuration list for PBXNativeTarget "mach_inject_bundle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				33B2AC7809285567004B1632 /* Development */,
-				33B2AC7909285567004B1632 /* Deployment */,
-				33B2AC7A09285567004B1632 /* Default */,
+				EAC693AC16379C6E00835782 /* Debug */,
+				EAC693AE16379C7400835782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 		33B2AC7B09285567004B1632 /* Build configuration list for PBXProject "mach_inject_bundle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				33B2AC7C09285567004B1632 /* Development */,
-				33B2AC7D09285567004B1632 /* Deployment */,
-				33B2AC7E09285567004B1632 /* Default */,
+				EAC693AB16379C6E00835782 /* Debug */,
+				EAC693AD16379C7400835782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Default;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
